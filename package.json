@@ -1,17 +1,20 @@
 {
-    "name": "figma-plugin-vue-starter",
+    "name": "starter-figma-vue",
     "version": "1.0.0",
     "author": "river <laolei@forkway.cn>",
     "license": "MIT",
-    "repository": "https://github.com/maximedaraize/figma-plugin-vue-starter",
+    "description": "A Starter Template For Figma Plugin Power By Vue",
+    "repository": "https://github.com/leizhenpeng/starter-figma-vue",
     "engines": {
         "node": "^14.18.0 || >=16.0.0"
     },
     "packageManager": "pnpm@7.9.5",
     "keywords": [
         "figma",
-        "plugin",
-        "starter"
+        "figma-plugin",
+        "starter",
+        "vue",
+        "vite"
     ],
     "scripts": {
         "dev": "vite",
