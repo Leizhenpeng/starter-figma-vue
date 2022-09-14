@@ -1,11 +1,11 @@
-# Figma Plugin Vue Starter
+# Figma Plugin Starter Power By Vue
 
 A starter template using vue3 and vite for developing Figma plugins
 
 ## Get started 
 
 ```
-npm install
+pnpm install
 ```
 
 ## Style & UI
@@ -14,13 +14,13 @@ Start a server with the following command to help you style
 the plugin UI, thanks to hotreload
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 ## Typescript
 
 Run the following command to compile your typescript
 ```bash
-npm run watch
+pnpm run watch
 ```
 
 
