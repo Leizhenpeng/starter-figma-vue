@@ -1,8 +1,12 @@
 /// <reference types="@figma/plugin-typings" />
 
-figma.showUI(__html__); // you can update canvas dimension here
+figma.showUI(__html__, {
+  width: 450,
+  height: 600,
+});
 figma.ui.onmessage = prop => {
   if (prop.type === 'apply-code') {
+    figma.ui.resize(400, 400);
     console.log('✅','code was applied');
     if (prop.triggerOne) {
       console.log('🔥','triggerOne was applied', prop.triggerOne);
@@ -31,7 +35,8 @@ figma.ui.onmessage = prop => {
     });
   }
   
-  // figma.closePlugin(); // Plugin is done, close it
+  if (prop.type ==='cancel'){
+    figma.closePlugin();
+  }
 };
 
-figma.showUI(__html__);

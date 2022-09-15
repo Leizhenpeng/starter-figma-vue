@@ -63,7 +63,7 @@ const _useRecommendedBuildConfig = (config) => {
   if (!config.build)
     config.build = {}
   // Ensures that even very large assets are inlined in your JavaScript.
-  config.build.assetsInlineLimit = 100000000
+  config.build.assetsInlineLimit = 10000000000000
   // Avoid warnings about large chunks.
   config.build.chunkSizeWarningLimit = 100000000
   // Emit all CSS as a single file, which `vite-plugin-singlefile` can then inline.

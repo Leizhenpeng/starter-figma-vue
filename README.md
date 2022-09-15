@@ -5,22 +5,23 @@ A starter template using vue3 and vite for developing Figma plugins
 ## Get started 
 
 ```
-pnpm install
+pnpm i
 ```
 
-## Style & UI
+## dev
 
 Start a server with the following command to help you style
 the plugin UI, thanks to hotreload
 
 ```bash
-pnpm run dev
+pnpm run dev:ui //dev ui
+pnpm run dev:hook // dev figma code
 ```
-## Typescript
+## build
 
-Run the following command to compile your typescript
+Run the following command to compile your plugin to show in figma
 ```bash
-pnpm run watch
+pnpm run build
 ```
 
 

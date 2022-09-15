@@ -17,7 +17,6 @@ const config = {
         output: {
             entryFileNames: 'assets/[name].js',
         },
-        
     },
     hook: {
         input: {
@@ -30,7 +29,8 @@ const config = {
     },
 };
 
-const currentConfig = config[process.env.LIB_NAME];
+const LIB_NAME = process.env.LIB_NAME || 'ui';
+const currentConfig = config[LIB_NAME];
 
 if (currentConfig === undefined) {
     throw new Error('LIB_NAME is not defined or is not valid');
@@ -67,6 +67,7 @@ export default defineConfig({
             viteSingleFile(),
         ],
     build: {
+        assetsInlineLimit: 1000000000000000,
         rollupOptions: {
             ...currentConfig,
             emptyOutDir: false,
