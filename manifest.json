@@ -2,10 +2,10 @@
   "name": "YOUR PLUGIN NAME",
   "id": "YOUR PLUGIN ID",
   "api": "1.0.0",
-  "main": "dist/code.js",
+  "main": ".appscript/code.js",
   "editorType": [
     "figma",
-     "figjam"
+    "figjam"
   ],
-  "ui": "dist/index.html"
+  "ui": ".appscript/index.html"
 }

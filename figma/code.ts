@@ -10,5 +10,28 @@ figma.ui.onmessage = prop => {
       figma.notify('notification after execution');
   }
 
-  figma.closePlugin(); // Plugin is done, close it
+  if (prop.type === 'create-rectangles') {
+    const nodes = [] as any;
+
+    for (let i = 0; i < prop.count; i++) {
+      const rect = figma.createRectangle();
+      rect.x = i * 150;
+      rect.fills = [{ type: 'SOLID', color: { r: 1, g: 0.5, b: 0 } }];
+      figma.currentPage.appendChild(rect);
+      nodes.push(rect);
+    }
+
+    figma.currentPage.selection = nodes;
+    figma.viewport.scrollAndZoomIntoView(nodes);
+
+    // This is how figma responds back to the ui
+    figma.ui.postMessage({
+      type: 'create-rectangles',
+      message: `Created ${prop} Rectangles`,
+    });
+  }
+  
+  // figma.closePlugin(); // Plugin is done, close it
 };
+
+figma.showUI(__html__);

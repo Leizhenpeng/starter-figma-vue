@@ -1,0 +1,64 @@
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html.dark {
+  background: #121212;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+   outline:none;
+}
+
+:root {
+  --c-primary: #af231c;
+  --c-primary-deep: #92130a;
+  --c-ok: #af231c;
+  --c-mis: #1c734b;
+  --c-warn: #de7525;
+}
+.dark {
+  --c-primary: #C23A3A;
+  --c-primary-deep: #92130a;
+  --c-ok: #C23A3A;
+  --c-mis: #2E948F;
+  --c-warn: #de7525;
+}
+
+p {
+  text-align: left;
+}
+
+.colorblind {
+  --c-ok:#5ba554;
+  --c-mis: #ff46ff;
+  --c-primary:#5ba554;
+  --c-primary-deep: #5ba554;
+}
+
+ul {
+  list-style: disc;
+}
+
+/* Transition */
+.fade-in-enter-active {
+  transition: all 1s ease;
+}
+.fade-out-leave-active {
+  transition: all 0.5s ease;
+}
+
+.fade-out-leave-to,
+.fade-in-enter-from {
+  transform: translateY(10px);
+  opacity: 0;
+}

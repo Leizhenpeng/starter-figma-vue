@@ -2,6 +2,7 @@
     "compilerOptions": {
         "target": "esnext",
         "useDefineForClassFields": true,
+        "allowSyntheticDefaultImports": true,
         "module": "esnext",
         "moduleResolution": "node",
         "strict": true,
@@ -12,7 +13,12 @@
         "esModuleInterop": true,
         "lib": ["esnext", "dom"],
         "skipLibCheck": true,
-        "allowJs": true
+        "allowJs": true,
+        "types": ["vite/client", "vitest/importMeta"],
+        "baseUrl": ".",
+        "paths": {
+            "~/*": ["src/*"]
+        },
     },
     "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
     "references": [{ "path": "./tsconfig.node.json" }]

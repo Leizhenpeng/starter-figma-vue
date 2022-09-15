@@ -5,6 +5,7 @@
     "license": "MIT",
     "description": "A Starter Template For Figma Plugin Power By Vue",
     "repository": "https://github.com/leizhenpeng/starter-figma-vue",
+    "type": "module",
     "engines": {
         "node": "^14.18.0 || >=16.0.0"
     },
@@ -17,22 +18,34 @@
         "vite"
     ],
     "scripts": {
-        "dev": "vite",
-        "build": "vue-tsc --noEmit && vite build",
-        "watch": "vue-tsc --noEmit && vite build --watch",
-        "preview": "vite preview"
+        "dev:ui": "LIB_NAME=ui vite",
+        "build:hook": "vue-tsc --noEmit && LIB_NAME=hook vite build --mode production",
+        "build:ui": "vue-tsc --noEmit && LIB_NAME=ui vite build --mode production",
+        "build": "npm run build:hook && npm run build:ui && node utils/postProcessHtml.js",
+        "preview": "vite preview",
+        "test": "vitest"
     },
     "dependencies": {
+        "@vueuse/core": "^9.2.0",
         "figma-plugin-ds": "^1.0.1",
         "figx": "^0.1.0",
-        "vue": "^3.2.25"
+        "vue": "^3.2.39"
     },
     "devDependencies": {
-        "@figma/plugin-typings": "^1.44.0",
-        "@vitejs/plugin-vue": "^2.3.1",
-        "typescript": "^4.5.4",
-        "vite": "^2.9.5",
+        "eslint": "^8.19.0",
+        "@antfu/eslint-config": "^0.25.2",
+        "@figma/plugin-typings": "^1.51.0",
+        "@unocss/reset": "^0.45.21",
+        "@unocss/preset-mini": "^0.45.21",
+        "@vitejs/plugin-vue": "^2.3.4",
+        "typescript": "^4.8.3",
+        "unocss": "^0.45.21",
+        "unplugin-auto-import": "^0.9.2",
+        "unplugin-vue-components": "^0.21.1",
+        "vite": "^2.9.15",
         "vite-plugin-singlefile": "0.7.1",
-        "vue-tsc": "^0.34.7"
+        "vue-tsc": "^0.35.0",
+        "vite-node": "^0.17.1",
+        "vitest": "^0.18.1"
     }
 }
