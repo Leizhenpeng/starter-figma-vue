@@ -11,7 +11,6 @@ A starter template using vue3 and vite for developing Figma plugins
 ```
 pnpm i
 ```
-
 ## dev
 
 Start a server with the following command to help you style
@@ -40,3 +39,5 @@ More about Figma plugins: [here](https://www.figma.com/plugin-docs/)
 
 - [Figma UI Styles](https://github.com/thomas-lowry/figma-plugin-ds)
 - [Figma utilities](https://figx.cool)
+- [Naive UI](https://www.naiveui.com)
+- [VueUse](https://vueuse.org/)
