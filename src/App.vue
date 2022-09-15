@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { darkTheme, GlobalThemeOverrides } from 'naive-ui';
-import logo from './assets/logo.svg';
+import logo from './assets/logo.png';
 
 
 const triggerOne = ref('This works!')
